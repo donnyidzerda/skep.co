@@ -41,12 +41,22 @@
 
     /* ── NAV ── */
     nav {
-      position:fixed; top:0; right:0; z-index:100;
-      display:flex; gap:32px; padding:28px 40px;
+      position:fixed; top:0; left:0; right:0; z-index:100;
+      display:flex; align-items:center; justify-content:space-between;
+      padding:28px 40px;
       font-family:'Barlow Condensed', sans-serif;
       font-size:13px; font-weight:400;
       letter-spacing:0.15em; text-transform:uppercase;
     }
+    .nav-logo {
+      font-family:'Barlow Condensed', sans-serif;
+      font-size:18px; font-weight:500;
+      letter-spacing:0.25em; text-transform:uppercase;
+      color:var(--white); text-decoration:none;
+      transition:color 0.4s ease;
+    }
+    .nav-logo:hover { color:var(--olive2); }
+    .nav-links { display:flex; gap:32px; }
     nav a {
       color:var(--text3);
       text-decoration:none;
@@ -279,6 +289,13 @@
       border:1px solid rgba(74,112,67,0.3);
       padding:4px 10px; border-radius:1px;
     }
+    .tool-tag--live {
+      color:var(--olive3);
+      border-color:rgba(122,173,111,0.4);
+    }
+    a.tool-card {
+      text-decoration:none; color:inherit; display:block;
+    }
 
     /* ── MANIFESTO ── */
     .manifesto-text { max-width:680px; }
@@ -387,7 +404,8 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width:768px) {
-      nav { gap:20px; padding:20px 24px; }
+      nav { padding:20px 24px; }
+      .nav-links { gap:20px; }
       .content-section { padding:100px 24px; }
       .tools-grid { grid-template-columns:1fr; }
       .tool-card { padding:36px 28px; }
@@ -395,7 +413,8 @@
       .book-num { margin-bottom:8px; }
     }
     @media (max-width:480px) {
-      nav { gap:16px; padding:16px 20px; font-size:11px; }
+      nav { padding:16px 20px; font-size:11px; }
+      .nav-links { gap:16px; }
       .hero h1 { letter-spacing:0.08em; }
       .book-media { flex-direction:column; gap:8px; }
       .book-media a { text-align:center; }
@@ -406,9 +425,12 @@
 
   <!-- NAV -->
   <nav>
-    <a href="#tools">Tools</a>
-    <a href="#manifesto">Manifesto</a>
-    <a href="#library">Library</a>
+    <a class="nav-logo" href="/">Skep</a>
+    <div class="nav-links">
+      <a href="#tools">Tools</a>
+      <a href="#manifesto">Manifesto</a>
+      <a href="#library">Library</a>
+    </div>
   </nav>
 
   <!-- HERO -->
@@ -643,16 +665,16 @@
   <div class="content-section" id="tools">
     <div class="section-label reveal"><span>01</span> Tools</div>
     <div class="tools-grid">
-      <div class="tool-card reveal">
-        <h3>Sovereignty Stack</h3>
-        <p>Sleep, training, food, nervous system. Not as separate things you optimise. As one system that either works together or falls apart. This is the full thing.</p>
-        <div class="tool-tag">Protocol</div>
-      </div>
-      <div class="tool-card reveal">
-        <h3>Decision Filter</h3>
-        <p>Most bad decisions aren't wrong — they're just not yours. This strips the noise. What's left is the actual move.</p>
-        <div class="tool-tag">Framework</div>
-      </div>
+      <a class="tool-card reveal" href="/tools/promotor.html">
+        <h3>Promotor</h3>
+        <p>Built to remove the friction between making something and getting it in front of people. No fluff, no scheduling, no wasted motion.</p>
+        <div class="tool-tag tool-tag--live">Live ↗</div>
+      </a>
+      <a class="tool-card reveal" href="/tools/thework.html">
+        <h3>The Work</h3>
+        <p>The actual work. Stripped of everything that makes it feel harder than it is. You show up, you do the thing, you move.</p>
+        <div class="tool-tag tool-tag--live">Live ↗</div>
+      </a>
       <div class="tool-card reveal">
         <h3>Deconditioning Log</h3>
         <p>You can't fix what you can't see. This is a daily practice for catching the patterns that were installed in you — and watching them lose their grip.</p>
