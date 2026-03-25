@@ -3,13 +3,193 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Work — Skep</title>
-  <meta name="description" content="The actual work. Nothing else." />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <title>The Work — AI-Guided Byron Katie Inquiry · skep∴co</title>
+  <meta name="description" content="Byron Katie's four questions, guided by AI. It holds the space. It doesn't let you skip. You do the actual inquiry." />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500&family=Barlow:wght@300;400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Barlow:wght@300;400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/style.css" />
+
+  <style>
+    .tool-category {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--olive2);
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .tool-lead {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(18px, 2.2vw, 24px);
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.65;
+      color: var(--text2);
+      max-width: 620px;
+      margin-bottom: 40px;
+    }
+
+    .tool-section {
+      margin-bottom: 80px;
+    }
+
+    .tool-section-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--text4);
+      margin-bottom: 28px;
+      display: block;
+    }
+
+    .tool-prose p {
+      font-size: 16px;
+      line-height: 1.9;
+      color: var(--text2);
+      max-width: 620px;
+      margin-bottom: 20px;
+    }
+
+    .tool-prose p strong {
+      color: var(--white);
+      font-weight: 400;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--text4);
+      border: 1px solid var(--text4);
+      border-radius: 2px;
+      overflow: hidden;
+      margin-top: 8px;
+    }
+
+    .feature-cell {
+      background: var(--bg);
+      padding: 36px 32px;
+      transition: background 0.3s ease;
+    }
+
+    .feature-cell:hover {
+      background: var(--bg2);
+    }
+
+    .feature-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 11px;
+      font-weight: 300;
+      letter-spacing: 0.15em;
+      color: var(--olive);
+      margin-bottom: 14px;
+      display: block;
+    }
+
+    .feature-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 17px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+
+    .feature-desc {
+      font-size: 14px;
+      line-height: 1.8;
+      color: var(--text2);
+    }
+
+    .built-for-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .built-for-list li {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--text2);
+      padding: 16px 0;
+      border-bottom: 1px solid var(--text4);
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+    }
+
+    .built-for-list li:first-child {
+      border-top: 1px solid var(--text4);
+    }
+
+    .built-for-list li::before {
+      content: '—';
+      color: var(--olive);
+      flex-shrink: 0;
+      font-size: 14px;
+    }
+
+    .built-for-list strong {
+      color: var(--white);
+      font-weight: 400;
+    }
+
+    .tool-divider {
+      width: 40px;
+      height: 1px;
+      background: var(--text4);
+      margin: 64px 0;
+    }
+
+    .four-questions {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .four-questions li {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(16px, 1.8vw, 20px);
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.6;
+      color: var(--text2);
+      padding: 18px 0;
+      border-bottom: 1px solid var(--text4);
+      display: flex;
+      align-items: baseline;
+      gap: 20px;
+    }
+
+    .four-questions li:first-child {
+      border-top: 1px solid var(--text4);
+    }
+
+    .q-number {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 11px;
+      font-style: normal;
+      letter-spacing: 0.15em;
+      color: var(--olive);
+      flex-shrink: 0;
+      padding-top: 3px;
+    }
+
+    @media (max-width: 640px) {
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+      .feature-cell {
+        padding: 28px 24px;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -24,31 +204,94 @@
 
   <div class="tool-hero">
     <a href="/#tools" class="page-back">Tools</a>
-    <p class="tool-domain">thework.skep.co</p>
+    <span class="tool-category">Self-Inquiry · Byron Katie</span>
     <h1 class="tool-name">The Work</h1>
+    <p class="tool-lead">Four questions. One stressful thought. An AI that holds the space so you don't have to hold it yourself — and doesn't let you slide past the part that actually matters.</p>
+    <a href="https://thework.skep.co" class="tool-cta" target="_blank" rel="noopener">Begin The Work →</a>
+
+    <div class="tool-screenshot">
+      <!-- Replace with: <img src="../assets/thework-screenshot.png" alt="The Work interface showing guided inquiry conversation" /> -->
+      <div class="screenshot-placeholder">
+        <div class="s-dot"></div>
+        <span>Screenshot coming soon</span>
+      </div>
+    </div>
   </div>
 
   <div class="tool-body">
 
-    <div class="tool-description">
-      <p>The actual work. Stripped of everything that makes it feel harder than it is.</p>
-      <p>You show up. You do the thing. You move.</p>
+    <div class="tool-divider"></div>
+
+    <div class="tool-section">
+      <span class="tool-section-label">The four questions</span>
+      <ul class="four-questions">
+        <li><span class="q-number">01</span> Is it true?</li>
+        <li><span class="q-number">02</span> Can you absolutely know that it's true?</li>
+        <li><span class="q-number">03</span> How do you react — what happens — when you believe that thought?</li>
+        <li><span class="q-number">04</span> Who would you be without that thought?</li>
+      </ul>
     </div>
 
-    <a href="https://thework.skep.co" class="tool-cta" target="_blank" rel="noopener">Open The Work ↗</a>
+    <div class="tool-divider"></div>
 
-    <div class="tool-screenshot">
-      <!-- Replace with: <img src="../assets/thework-screenshot.png" alt="The Work screenshot" /> -->
-      <div class="screenshot-placeholder">
-        <div class="s-dot"></div>
-        <span>Screenshot coming</span>
+    <div class="tool-section">
+      <span class="tool-section-label">The problem</span>
+      <div class="tool-prose">
+        <p>Byron Katie's process works. That's not in dispute. The problem is doing it alone. You write down a thought — "he doesn't care about me," "I'm not good enough," "I shouldn't have said that" — and then you ask the first question and your mind immediately says yes, obviously it's true, that's why I wrote it down. And you move on. You skipped it. You didn't actually sit with the question long enough to feel anything shift.</p>
+        <p>Most people can't hold the inquiry for themselves. Not because they're bad at it. Because you can't simultaneously be the person being questioned and the person asking. The mind is too fast, too practiced at defending its positions. It knows where the exits are. It takes them.</p>
+        <p><strong>This tool is the facilitator.</strong> It asks the question. It waits. If your answer is too fast or too clean, it asks again a different way. It doesn't rush you to the turnaround. It holds the space so you can stop protecting yourself for long enough to see what's actually there.</p>
       </div>
+    </div>
+
+    <div class="tool-divider"></div>
+
+    <div class="tool-section">
+      <span class="tool-section-label">Features</span>
+      <div class="feature-grid">
+
+        <div class="feature-cell">
+          <span class="feature-number">01</span>
+          <div class="feature-title">Structured inquiry</div>
+          <p class="feature-desc">Start with the Judge Your Neighbor worksheet. Write down the thought exactly as it lives in you. Not cleaned up. Not softened. The AI takes it from there, one question at a time, in sequence.</p>
+        </div>
+
+        <div class="feature-cell">
+          <span class="feature-number">02</span>
+          <div class="feature-title">It doesn't let you skip</div>
+          <p class="feature-desc">If you answer question three in two sentences and move on, the AI notices. It sits with you on the question. Not pushback — just presence. The same gentle insistence a good facilitator would use.</p>
+        </div>
+
+        <div class="feature-cell">
+          <span class="feature-number">03</span>
+          <div class="feature-title">The turnarounds</div>
+          <p class="feature-desc">After the four questions comes the hardest part: finding three genuine examples of how the opposite might be true. The AI guides you through each turnaround without rushing, and doesn't accept "I can't think of anything" as an ending.</p>
+        </div>
+
+        <div class="feature-cell">
+          <span class="feature-number">04</span>
+          <div class="feature-title">No spiritual bypass</div>
+          <p class="feature-desc">This is not a tool that tells you your feelings are wrong or that you should be more peaceful. It takes the thought seriously. It assumes you had a real reason to write it down. The inquiry follows from there.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="tool-divider"></div>
+
+    <div class="tool-section">
+      <span class="tool-section-label">Built for</span>
+      <ul class="built-for-list">
+        <li><strong>People who have tried The Work alone</strong> and found themselves going through the motions without anything actually shifting</li>
+        <li><strong>People who can't afford a facilitator</strong> or aren't ready to sit across from another person with something this raw</li>
+        <li><strong>People who know the process</strong> but need something to hold them accountable to actually doing it — not just reading about it again</li>
+        <li><strong>Anyone with a thought</strong> they've been carrying around for years that they've never properly questioned</li>
+      </ul>
     </div>
 
   </div>
 
   <footer>
-    <a href="/">Skep.co</a>
+    skep∴co · sovereignty lab · privacy absolute · <a href="https://x.com/bigskepper" target="_blank" rel="noopener">@BigSkepper</a>
   </footer>
 
 </body>

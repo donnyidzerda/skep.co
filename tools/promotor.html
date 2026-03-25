@@ -3,13 +3,159 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Promotor — Skep</title>
-  <meta name="description" content="Remove the friction between making something and getting it out." />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <title>Promotor — Spanish Real Estate Financial Modelling · skep∴co</title>
+  <meta name="description" content="Spanish real estate financial modelling without the spreadsheet archaeology. Move a slider, watch the IRR update. Ask why the numbers changed. Get an actual answer." />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500&family=Barlow:wght@300;400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Barlow:wght@300;400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/style.css" />
+
+  <style>
+    .tool-category {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--olive2);
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .tool-lead {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(18px, 2.2vw, 24px);
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.65;
+      color: var(--text2);
+      max-width: 620px;
+      margin-bottom: 40px;
+    }
+
+    .tool-section {
+      margin-bottom: 80px;
+    }
+
+    .tool-section-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--text4);
+      margin-bottom: 28px;
+      display: block;
+    }
+
+    .tool-prose p {
+      font-size: 16px;
+      line-height: 1.9;
+      color: var(--text2);
+      max-width: 620px;
+      margin-bottom: 20px;
+    }
+
+    .tool-prose p strong {
+      color: var(--white);
+      font-weight: 400;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--text4);
+      border: 1px solid var(--text4);
+      border-radius: 2px;
+      overflow: hidden;
+      margin-top: 8px;
+    }
+
+    .feature-cell {
+      background: var(--bg);
+      padding: 36px 32px;
+      transition: background 0.3s ease;
+    }
+
+    .feature-cell:hover {
+      background: var(--bg2);
+    }
+
+    .feature-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 11px;
+      font-weight: 300;
+      letter-spacing: 0.15em;
+      color: var(--olive);
+      margin-bottom: 14px;
+      display: block;
+    }
+
+    .feature-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 17px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+
+    .feature-desc {
+      font-size: 14px;
+      line-height: 1.8;
+      color: var(--text2);
+    }
+
+    .built-for-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .built-for-list li {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--text2);
+      padding: 16px 0;
+      border-bottom: 1px solid var(--text4);
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+    }
+
+    .built-for-list li:first-child {
+      border-top: 1px solid var(--text4);
+    }
+
+    .built-for-list li::before {
+      content: '—';
+      color: var(--olive);
+      flex-shrink: 0;
+      font-size: 14px;
+    }
+
+    .built-for-list strong {
+      color: var(--white);
+      font-weight: 400;
+    }
+
+    .tool-divider {
+      width: 40px;
+      height: 1px;
+      background: var(--text4);
+      margin: 64px 0;
+    }
+
+    @media (max-width: 640px) {
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+      .feature-cell {
+        padding: 28px 24px;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -24,31 +170,82 @@
 
   <div class="tool-hero">
     <a href="/#tools" class="page-back">Tools</a>
-    <p class="tool-domain">promotor.skep.co</p>
+    <span class="tool-category">Real Estate · Financial Modelling</span>
     <h1 class="tool-name">Promotor</h1>
+    <p class="tool-lead">Spanish real estate financial modelling — without the spreadsheet archaeology. Move a slider, watch the IRR update. Ask why the numbers changed. Get an actual answer.</p>
+    <a href="https://promotor.skep.co" class="tool-cta" target="_blank" rel="noopener">Open Promotor →</a>
+
+    <div class="tool-screenshot">
+      <!-- Replace with: <img src="../assets/promotor-screenshot.png" alt="Promotor interface showing live IRR sliders and scenario comparison" /> -->
+      <div class="screenshot-placeholder">
+        <div class="s-dot"></div>
+        <span>Screenshot coming soon</span>
+      </div>
+    </div>
   </div>
 
   <div class="tool-body">
 
-    <div class="tool-description">
-      <p>Built to remove the friction between making something and getting it in front of people. No fluff, no scheduling theatre, no wasted motion.</p>
-      <p>You made the thing. This gets it out.</p>
+    <div class="tool-divider"></div>
+
+    <div class="tool-section">
+      <span class="tool-section-label">The problem</span>
+      <div class="tool-prose">
+        <p>Every Spanish real estate deal lives in an Excel file. Not one file — several. One from the land vendor, one from the architect, one your analyst built six months ago that nobody fully trusts anymore. They don't talk to each other. The assumptions are buried three tabs deep. When the exit yield moves 25bps, someone spends an afternoon tracing the impact through formulas that break if you scroll too fast.</p>
+        <p>The model is supposed to be the tool. Instead it becomes the obstacle. Half the IC meeting is spent arguing about which version of the sheet is correct. The other half is spent explaining why the IRR dropped between Monday and Thursday when nothing fundamental changed — just a typo in row 47, a hard-coded number that got overwritten, a linked cell that stopped linking.</p>
+        <p><strong>Promotor replaces the sheet.</strong> Not with a simpler version of the same thing. With something that was designed to answer questions, not just store them.</p>
+      </div>
     </div>
 
-    <a href="https://promotor.skep.co" class="tool-cta" target="_blank" rel="noopener">Open Promotor ↗</a>
+    <div class="tool-divider"></div>
 
-    <div class="tool-screenshot">
-      <!-- Replace with: <img src="../assets/promotor-screenshot.png" alt="Promotor screenshot" /> -->
-      <div class="screenshot-placeholder">
-        <div class="s-dot"></div>
-        <span>Screenshot coming</span>
+    <div class="tool-section">
+      <span class="tool-section-label">Features</span>
+      <div class="feature-grid">
+
+        <div class="feature-cell">
+          <span class="feature-number">01</span>
+          <div class="feature-title">Live model sliders</div>
+          <p class="feature-desc">Drag land cost, construction per m², absorption rate, exit yield. IRR, ROI, and monthly cash flow recalculate instantly. No formulas to chase. No refresh button. The model responds as you think.</p>
+        </div>
+
+        <div class="feature-cell">
+          <span class="feature-number">02</span>
+          <div class="feature-title">AI that knows your numbers</div>
+          <p class="feature-desc">Ask "why is my IRR lower than last week?" or "what's driving the cash shortfall in month 14?" The AI traces the answer to your specific inputs — not generic advice about real estate. It knows your model, not a hypothetical one.</p>
+        </div>
+
+        <div class="feature-cell">
+          <span class="feature-number">03</span>
+          <div class="feature-title">Upload and auto-fill</div>
+          <p class="feature-desc">Drop in a deal memo, a brief, or an existing Excel sheet. The AI reads it and populates all assumptions. You review, adjust, proceed. The first 30 minutes of model setup disappear.</p>
+        </div>
+
+        <div class="feature-cell">
+          <span class="feature-number">04</span>
+          <div class="feature-title">Scenario comparison</div>
+          <p class="feature-desc">Bear, base, bull — side by side. See exactly where the cases diverge and which assumption is doing the most work. Useful for IC packs. More useful for knowing what you actually believe about the deal.</p>
+        </div>
+
       </div>
+    </div>
+
+    <div class="tool-divider"></div>
+
+    <div class="tool-section">
+      <span class="tool-section-label">Built for</span>
+      <ul class="built-for-list">
+        <li><strong>PE firms</strong> running Spanish residential or mixed-use deals who need fast iteration between IC meetings — not another version of the sheet to email around</li>
+        <li><strong>Developers</strong> who built their own Excel model years ago and are now afraid to touch it in case something breaks</li>
+        <li><strong>Analysts</strong> who spend more time maintaining the model than actually using it to think about the deal</li>
+        <li><strong>Anyone</strong> who has said "let me just update the sheet" and meant it as an apology</li>
+      </ul>
     </div>
 
   </div>
 
   <footer>
-    <a href="/">Skep.co</a>
+    skep∴co · sovereignty lab · privacy absolute · <a href="https://x.com/bigskepper" target="_blank" rel="noopener">@BigSkepper</a>
   </footer>
 
 </body>
