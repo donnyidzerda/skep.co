@@ -121,20 +121,45 @@
       letter-spacing:-0.01em;
     }
     .hero-sub {
-      margin-top:36px;
+      margin-top:48px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:14px;
+    }
+    .hero-sub-label {
       font-family:'Barlow Condensed', sans-serif;
-      font-size:11px;
+      font-size:10px;
       font-weight:400;
       letter-spacing:0.22em;
       text-transform:uppercase;
       color:var(--text4);
     }
     .hero-sub a {
-      color:var(--text3);
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      color:var(--white);
       text-decoration:none;
-      transition:color 0.3s;
+      border:1px solid rgba(240,236,227,0.25);
+      padding:12px 28px;
+      border-radius:2px;
+      font-family:'Barlow Condensed', sans-serif;
+      font-size:13px;
+      font-weight:500;
+      letter-spacing:0.18em;
+      text-transform:uppercase;
+      transition:color 0.3s, border-color 0.3s, background 0.3s;
     }
-    .hero-sub a:hover { color:var(--olive2); }
+    .hero-sub a:hover {
+      color:var(--olive2);
+      border-color:var(--olive);
+      background:rgba(74,112,67,0.08);
+    }
+    .hero-sub a svg {
+      width:16px; height:16px;
+      fill:currentColor;
+    }
     .hero-scroll {
       position:absolute;
       bottom:48px; left:50%;
@@ -656,7 +681,10 @@
 
     <div class="hero-content">
       <h1>Sovereignty is the only operating system that survives</h1>
-      <p class="hero-sub">raw drops on <a href="https://x.com/bigskepper" target="_blank" rel="noopener">X</a></p>
+      <div class="hero-sub">
+        <span class="hero-sub-label">raw drops on</span>
+        <a href="https://x.com/bigskepper" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>@BigSkepper</a>
+      </div>
     </div>
 
     <div class="hero-scroll"></div>
@@ -980,7 +1008,7 @@
 
   <footer>
     <div class="footer-line"></div>
-    skep∴co · <a href="https://x.com/bigskepper" target="_blank" rel="noopener">@BigSkepper</a>
+    skep∴co · <a href="https://x.com/bigskepper" target="_blank" rel="noopener"><svg style="width:12px;height:12px;fill:currentColor;vertical-align:-1px;margin-right:4px" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>@BigSkepper</a>
   </footer>
 
   <script>
