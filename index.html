@@ -120,45 +120,44 @@
       max-width:780px;
       letter-spacing:-0.01em;
     }
-    .hero-sub {
-      margin-top:48px;
+    .hero-cta {
+      margin-top:56px;
       display:flex;
       flex-direction:column;
       align-items:center;
-      gap:14px;
+      gap:20px;
     }
-    .hero-sub-label {
-      font-family:'Barlow Condensed', sans-serif;
-      font-size:10px;
-      font-weight:400;
-      letter-spacing:0.22em;
-      text-transform:uppercase;
-      color:var(--text4);
-    }
-    .hero-sub a {
+    .hero-cta a {
       display:inline-flex;
       align-items:center;
-      gap:10px;
-      color:var(--white);
+      gap:14px;
+      color:var(--bg);
       text-decoration:none;
-      border:1px solid rgba(240,236,227,0.25);
-      padding:12px 28px;
+      background:var(--white);
+      padding:16px 36px;
       border-radius:2px;
       font-family:'Barlow Condensed', sans-serif;
-      font-size:13px;
-      font-weight:500;
-      letter-spacing:0.18em;
+      font-size:14px;
+      font-weight:600;
+      letter-spacing:0.14em;
       text-transform:uppercase;
-      transition:color 0.3s, border-color 0.3s, background 0.3s;
+      transition:background 0.3s, transform 0.15s;
     }
-    .hero-sub a:hover {
-      color:var(--olive2);
-      border-color:var(--olive);
-      background:rgba(74,112,67,0.08);
+    .hero-cta a:hover {
+      background:var(--olive3);
+      color:var(--bg);
+      transform:translateY(-1px);
     }
-    .hero-sub a svg {
-      width:16px; height:16px;
+    .hero-cta a svg {
+      width:20px; height:20px;
       fill:currentColor;
+    }
+    .hero-cta-sub {
+      font-family:'Barlow', sans-serif;
+      font-size:13px;
+      font-weight:300;
+      color:var(--text3);
+      letter-spacing:0.02em;
     }
     .hero-scroll {
       position:absolute;
@@ -681,9 +680,9 @@
 
     <div class="hero-content">
       <h1>Sovereignty is the only operating system that survives</h1>
-      <div class="hero-sub">
-        <span class="hero-sub-label">raw drops on</span>
-        <a href="https://x.com/bigskepper" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>@BigSkepper</a>
+      <div class="hero-cta">
+        <a href="https://x.com/bigskepper" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Follow @BigSkepper</a>
+        <span class="hero-cta-sub">Raw drops. No algorithm. No filter.</span>
       </div>
     </div>
 
@@ -700,25 +699,25 @@
     <div class="manifesto-text">
       <h2 class="reveal">You're running someone else's code and calling it <em>your life</em></h2>
 
-      <p class="reveal">Every opinion you hold. Check it. Is it yours? Or did someone install it before you had the capacity to refuse? Most of what we call personality is just unexamined conditioning wearing a familiar face.</p>
+      <p class="reveal">Every opinion you hold. Check it. Is it yours? Or did someone install it before you had the capacity to refuse? Most of what we call personality is conditioning we never audited.</p>
 
-      <p class="reveal">This isn't about fixing yourself. Nothing's broken. It's about peeling back all the shit that was layered on top of what was already working.</p>
-
-      <div class="manifesto-divider reveal"></div>
-
-      <p class="reveal"><strong>The body already knows.</strong> It's been screaming the answer while you've been Googling it. Bad sleep, chronic tension, inability to sit still, emotional reactivity. None of that is a deficiency. It's signal. You just never learned to read it.</p>
-
-      <p class="reveal">So we don't add. We remove. Less noise, less input, less performance, less proving. What's left when you stop performing is the actual you. That version doesn't need a system. It is the system.</p>
+      <p class="reveal">Nothing here is about fixing yourself. Nothing's broken. The work is peeling back what was layered on top of something that already worked.</p>
 
       <div class="manifesto-divider reveal"></div>
 
-      <p class="reveal"><strong>Sleep is the foundation.</strong> Not a hack. Not 8 hours of discipline porn. The actual biological non-negotiable that every other function depends on. Get this wrong and nothing else matters. Training is structure. Not punishment, not aesthetics, just honest load that your body can use. Food is fuel you actually need, not what some influencer ate on camera.</p>
+      <p class="reveal"><strong>The body already knows.</strong> It's been screaming the answer while you've been Googling it. Bad sleep, chronic tension, inability to sit still, emotional reactivity that makes no sense. All signal. You just never learned to read it.</p>
 
-      <p class="reveal">And then: wait. The hardest part. Especially if you're wired to move. The right move shows itself. Forcing the wrong one is how most people stay stuck while feeling productive.</p>
+      <p class="reveal">So we don't add. We remove. Less noise, less input, less performance, less proving. What's left when you stop performing is the actual you. And that version doesn't need a system. It is one.</p>
 
       <div class="manifesto-divider reveal"></div>
 
-      <p class="reveal"><strong>No gurus. No followers. No community.</strong> Just individuals doing their own work. If you need someone to tell you what to do, you're not ready for this. When you are, you won't need to be told.</p>
+      <p class="reveal"><strong>Sleep is the foundation.</strong> Not a hack. Not discipline porn. The biological non-negotiable that everything else depends on. Get this wrong and nothing you stack on top of it will hold. Training is honest load your body can use. Food is fuel you actually need.</p>
+
+      <p class="reveal">Then: wait. Hardest part. Especially if you're wired to move. The right move shows itself. Forcing the wrong one is how people stay stuck while feeling productive.</p>
+
+      <div class="manifesto-divider reveal"></div>
+
+      <p class="reveal"><strong>No gurus. No followers. No community.</strong> Just individuals doing their own work. If you need someone to tell you what to do, you're not ready. When you are, you won't need to be told.</p>
     </div>
   </div>
 
@@ -1008,7 +1007,7 @@
 
   <footer>
     <div class="footer-line"></div>
-    skep∴co · <a href="https://x.com/bigskepper" target="_blank" rel="noopener"><svg style="width:12px;height:12px;fill:currentColor;vertical-align:-1px;margin-right:4px" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>@BigSkepper</a>
+    skep∴co · <a href="https://x.com/bigskepper" target="_blank" rel="noopener"><svg style="width:11px;height:11px;fill:currentColor;vertical-align:-1px;margin-right:3px" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>@BigSkepper</a>
   </footer>
 
   <script>
